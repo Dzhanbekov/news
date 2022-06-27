@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+<body>
+    {% block content %}
+<h3>{{ news.title }}</h3>
+<p>{{ news.content }}</p>
+    {% if news.image %}
+        <a href="#"><img class="card-img-top" src="{{ news.image.url }}" alt="" width="400" height="600"></a>
+    {% endif %}
+<p>{{ news.date }}</p>
+    {% endblock %}
+</body>
+
